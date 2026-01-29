@@ -185,6 +185,10 @@ the command instead of actually citing. --></p>
 <li>Drag <code>body_mass_g</code> to the X box and <code>species</code> to the fill box.</li>
 <li>Describe what you see in words. What can you conclude about Adelie, Chinstrap, and Gentoo penguins based on the resulting plot?</li>
 </ol>
+<section id="solution" class="level3" data-number="1.6.1">
+<h3 data-number="1.6.1" class="anchored" data-anchor-id="solution"><span class="header-section-number">1.6.1</span> Solution</h3>
+<p>According to the histogram, there are the most of the Adelle species in general. In terms of body mass in grams, both Adelle and Chinstrap have a similar range of body mass from around 2000-5000 with peaks around 3500+. In contrast, the Gentoo species has greater body mass, ranging from around 4000-6000.</p>
+</section>
 </section>
 </section>
 <section id="objects-and-vectors" class="level1" data-number="2">
@@ -252,35 +256,7 @@ the command instead of actually citing. --></p>
 <h2 data-number="2.1" class="anchored" data-anchor-id="part-a-1"><span class="header-section-number">2.1</span> Part a</h2>
 <p>The Fibonacci Sequence is a recursive formula: <span class="math display">\[F_n = F_{n-1} + F_{n-2}\]</span> where <span class="math inline">\(F_0=0\)</span> and <span class="math inline">\(F_1=1\)</span>.</p>
 <p>Create a vector of the first 10 Fibonacci numbers.</p>
-</section>
-<section id="part-b-1" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="part-b-1"><span class="header-section-number">2.2</span> Part b</h2>
-<p>Triangular Numbers are the cumulative sums of natural numbers: <span class="math display">\[F_n = \frac{n(n+1)}{2}.\]</span></p>
-<p>Create a vector of the first 10 Triangular Numbers.</p>
-</section>
-<section id="part-c-1" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="part-c-1"><span class="header-section-number">2.3</span> Part c</h2>
-<p>Suppose I were designing a repeated meausres experiment with three treatment conditions. Each of <span class="math inline">\(n=10\)</span> participants (with <code>ID</code> 1 to 10) will receive <em>all</em> experimental conditions, call them “Control”, “Treatment A”, and “Treatment B”.</p>
-<p>Consider setting up data entry for this experiment.</p>
-<ol type="i">
-<li>Create a vector containing each <code>ID</code> repeated three times, once for each treatment.</li>
-<li>Create a vector containing each <code>Treatment</code> repeated for each participant ID.</li>
-</ol>
-</section>
-<section id="part-d-1" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="part-d-1"><span class="header-section-number">2.4</span> Part d</h2>
-<p>Create a vector containing the <code>character</code> “MATH” and the <code>numeric</code> 240. What is the resulting class? Explain why in a sentence.</p>
-</section>
-</section>
-<section id="solution" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Solution</h1>
-<section id="histogram" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="histogram"><span class="header-section-number">3.1</span> Histogram</h2>
-<p>According to the histogram, there are the most of the Adelle species in general. In terms of body mass in grams, both Adelle and Chinstrap have a similar range of body mass from around 2000-5000 with peaks around 3500+. In contrast, the Gentoo species has greater body mass, ranging from around 4000-6000.</p>
-</section>
-</section>
-<section id="part-a-2" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Part a</h1>
+<p><strong>Solution</strong></p>
 <p></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>(fibonacci <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">13</span>, <span class="dv">21</span>, <span class="dv">34</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -290,8 +266,11 @@ the command instead of actually citing. --></p>
 </div>
 <p></p>
 </section>
-<section id="part-b-2" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Part b</h1>
+<section id="part-b-1" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="part-b-1"><span class="header-section-number">2.2</span> Part b</h2>
+<p>Triangular Numbers are the cumulative sums of natural numbers: <span class="math display">\[F_n = \frac{n(n+1)}{2}.\]</span></p>
+<p>Create a vector of the first 10 Triangular Numbers.</p>
+<p><strong>Solution</strong></p>
 <p></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>(triangular <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">10</span>, <span class="dv">15</span>, <span class="dv">21</span>, <span class="dv">28</span>, <span class="dv">36</span>, <span class="dv">45</span>, <span class="dv">55</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -301,10 +280,15 @@ the command instead of actually citing. --></p>
 </div>
 <p></p>
 </section>
-<section id="part-c-2" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Part c</h1>
-<section id="i" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="i"><span class="header-section-number">6.1</span> i</h2>
+<section id="part-c-1" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="part-c-1"><span class="header-section-number">2.3</span> Part c</h2>
+<p>Suppose I were designing a repeated meausres experiment with three treatment conditions. Each of <span class="math inline">\(n=10\)</span> participants (with <code>ID</code> 1 to 10) will receive <em>all</em> experimental conditions, call them “Control”, “Treatment A”, and “Treatment B”.</p>
+<p>Consider setting up data entry for this experiment.</p>
+<ol type="i">
+<li>Create a vector containing each <code>ID</code> repeated three times, once for each treatment.</li>
+<li>Create a vector containing each <code>Treatment</code> repeated for each participant ID.</li>
+</ol>
+<p><strong>Solution</strong></p>
 <p></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>(id.repeating.seq <span class="ot">&lt;-</span> <span class="fu">rep</span>((<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>), <span class="at">times=</span><span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -314,22 +298,24 @@ the command instead of actually citing. --></p>
 </div>
 </div>
 <p></p>
-</section>
-<section id="ii" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="ii"><span class="header-section-number">6.2</span> ii</h2>
 <p></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a>(treatment.repeating.seq <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"Control"</span>, <span class="st">"Treatment A"</span>, <span class="st">"Treatment B"</span>), <span class="at">times=</span><span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a>(treatment.repeating.seq <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"Control"</span>, <span class="st">"Treatment A"</span>, <span class="st">"Treatment B"</span>), <span class="at">each=</span><span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "Control"     "Treatment A" "Treatment B" "Control"     "Treatment A"
-[6] "Treatment B" "Control"     "Treatment A" "Treatment B"</code></pre>
+<pre><code> [1] "Control"     "Control"     "Control"     "Control"     "Control"    
+ [6] "Control"     "Control"     "Control"     "Control"     "Control"    
+[11] "Treatment A" "Treatment A" "Treatment A" "Treatment A" "Treatment A"
+[16] "Treatment A" "Treatment A" "Treatment A" "Treatment A" "Treatment A"
+[21] "Treatment B" "Treatment B" "Treatment B" "Treatment B" "Treatment B"
+[26] "Treatment B" "Treatment B" "Treatment B" "Treatment B" "Treatment B"</code></pre>
 </div>
 </div>
 <p></p>
 </section>
-</section>
-<section id="part-d-2" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Part d</h1>
+<section id="part-d-1" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="part-d-1"><span class="header-section-number">2.4</span> Part d</h2>
+<p>Create a vector containing the <code>character</code> “MATH” and the <code>numeric</code> 240. What is the resulting class? Explain why in a sentence.</p>
+<p><strong>Solution</strong></p>
 <p></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a>(course.name <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"MATH"</span>, <span class="dv">240</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -339,10 +325,11 @@ the command instead of actually citing. --></p>
 </div>
 <p></p>
 </section>
-<section id="citations" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> Citations</h1>
+<section id="citations" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="citations"><span class="header-section-number">2.5</span> Citations</h2>
 <p>Citing <span class="citation" data-cites="R">(<a href="#ref-R" role="doc-biblioref">R Core Team 2025</a>)</span> Citing <span class="citation" data-cites="primes">(<a href="#ref-primes" role="doc-biblioref">Keyes and Egeler 2025</a>)</span> Citing <span class="citation" data-cites="esquisse">(<a href="#ref-esquisse" role="doc-biblioref">Meyer and Perrier 2025</a>)</span></p>
 
+</section>
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
