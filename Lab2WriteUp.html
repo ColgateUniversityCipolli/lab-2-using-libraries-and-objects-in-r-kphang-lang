@@ -264,7 +264,7 @@ the command instead of actually citing. --></p>
 <pre><code> [1]  0  1  1  2  3  5  8 13 21 34</code></pre>
 </div>
 </div>
-<p> I used c() to form this vector manually, because there is no regular patter that rep() or seq() could use to easily form the vector.</p>
+<p> I used c() to form this vector manually, because there is no regular pattern that rep() or seq() could use to easily form the vector.</p>
 </section>
 <section id="part-b-1" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="part-b-1"><span class="header-section-number">2.2</span> Part b</h2>
@@ -273,12 +273,21 @@ the command instead of actually citing. --></p>
 <p><strong>Solution</strong></p>
 <p></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>(triangular <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">10</span>, <span class="dv">15</span>, <span class="dv">21</span>, <span class="dv">28</span>, <span class="dv">36</span>, <span class="dv">45</span>, <span class="dv">55</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>n <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
+<span id="cb20-2"><a href="#cb20-2"></a>(triangular <span class="ot">&lt;-</span> n <span class="sc">*</span> (n <span class="sc">+</span> <span class="dv">1</span>) <span class="sc">/</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1]  1  3  6 10 15 21 28 36 45 55</code></pre>
 </div>
 </div>
-<p> I used c() to form this vector manually, because there is no regular patter that rep() or seq() could use to easily form the vector.</p>
+<p> Here, I made <span class="math inline">\(n = 1:10\)</span>, along with the equation <span class="math inline">\(n*(n+1)/2\)</span> to easily generate the first 10 terms that follow the given pattern of triangular numbers.</p>
+<p></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>(triangular <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">10</span>, <span class="dv">15</span>, <span class="dv">21</span>, <span class="dv">28</span>, <span class="dv">36</span>, <span class="dv">45</span>, <span class="dv">55</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  1  3  6 10 15 21 28 36 45 55</code></pre>
+</div>
+</div>
+<p> Alternatively, you could use c() to form this vector manually (like above), but this becomes impractical if we were trying to generate a larger vector.</p>
 </section>
 <section id="part-c-1" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="part-c-1"><span class="header-section-number">2.3</span> Part c</h2>
@@ -291,7 +300,7 @@ the command instead of actually citing. --></p>
 <p><strong>Solution</strong></p>
 <p></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>(id.repeating.seq <span class="ot">&lt;-</span> <span class="fu">rep</span>((<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>), <span class="at">times=</span><span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a>(id.repeating.seq <span class="ot">&lt;-</span> <span class="fu">rep</span>((<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>), <span class="at">times=</span><span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1]  1  2  3  4  5  6  7  8  9 10  1  2  3  4  5  6  7  8  9 10  1  2  3  4  5
 [26]  6  7  8  9 10</code></pre>
@@ -300,7 +309,7 @@ the command instead of actually citing. --></p>
 <p></p>
 <p></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a>(treatment.repeating.seq <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"Control"</span>, <span class="st">"Treatment A"</span>, <span class="st">"Treatment B"</span>), <span class="at">each=</span><span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a>(treatment.repeating.seq <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"Control"</span>, <span class="st">"Treatment A"</span>, <span class="st">"Treatment B"</span>), <span class="at">each=</span><span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "Control"     "Control"     "Control"     "Control"     "Control"    
  [6] "Control"     "Control"     "Control"     "Control"     "Control"    
@@ -310,7 +319,7 @@ the command instead of actually citing. --></p>
 [26] "Treatment B" "Treatment B" "Treatment B" "Treatment B" "Treatment B"</code></pre>
 </div>
 </div>
-<p> For part i it is sufficient to use repeating.seq from 1 to 10 to show how each ID received 3 treatments. Part ii then assigns the 3 treatments to the corresponding participants using the each.seq, but this function needs to do each 10 times to match the 30 IDs.</p>
+<p> For part i it is sufficient to use repeating.seq from 1 to 10 to show how each ID received 3 treatments. Part ii, then, assigns the 3 treatments to the corresponding participants using each.seq, but this function needs to do each 10 times to match the 30 IDs.</p>
 </section>
 <section id="part-d-1" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="part-d-1"><span class="header-section-number">2.4</span> Part d</h2>
@@ -318,20 +327,20 @@ the command instead of actually citing. --></p>
 <p><strong>Solution</strong></p>
 <p></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a>(course.name <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"MATH"</span>, <span class="dv">240</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a>(course.name <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"MATH"</span>, <span class="dv">240</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "MATH" "240" </code></pre>
 </div>
 </div>
-<p> The result shows both “MATH” and 240 as characters, since this is the rightmost class of objects</p>
+<p> The result shows both “MATH” and 240 as characters, since this is the rightmost class of objects. This is because vectors are atomic and will only report one class type. Characters are the only class type that could kind of fit the data inputted here, so R will return both “MATH” and 240 as characters.</p>
 </section>
 <section id="citations" class="level2" data-number="2.5">
 <h2 data-number="2.5" class="anchored" data-anchor-id="citations"><span class="header-section-number">2.5</span> Citations</h2>
-<p>I used R for the entirety of this assignment <span class="citation" data-cites="R">(<a href="#ref-R" role="doc-biblioref">R Core Team 2025</a>)</span>. I used the primes <span class="citation" data-cites="primes">(<a href="#ref-primes" role="doc-biblioref">Keyes and Egeler 2025</a>)</span> package for the vectors above, as well as the esquisse package <span class="citation" data-cites="esquisse">(<a href="#ref-esquisse" role="doc-biblioref">Meyer and Perrier 2025</a>)</span> to create and analyze the histogram.</p>
+<p>I used R for the entirety of this assignment <span class="citation" data-cites="R">(<a href="#ref-R" role="doc-biblioref">R Core Team 2025</a>)</span>. The primes <span class="citation" data-cites="primes">(<a href="#ref-primes" role="doc-biblioref">Keyes and Egeler 2025</a>)</span> package was used for specific vector functions with prime numbers and the esquisse package <span class="citation" data-cites="esquisse">(<a href="#ref-esquisse" role="doc-biblioref">Meyer and Perrier 2025</a>)</span> was used to create and analyze the histogram.</p>
 </section>
 <section id="discussion" class="level2" data-number="2.6">
 <h2 data-number="2.6" class="anchored" data-anchor-id="discussion"><span class="header-section-number">2.6</span> Discussion</h2>
-<p>I used different strategies of creating vectors to form the vectors in parts a through d.&nbsp;At times, vectors needed to be created manually, while others could be made more efficiently using rep() functions. Questions such as part c where there is a lot of repetitive data cater much better to the rep() function, and questions such as part d show the necessity of data agreement in a vector. The vector in part d gave back two characters, rather than a character and a number, because vectors are atomic and return the type of data furtherst right in the progression. The vectors in parts a and b, were short and followed less regular patterns, so in this case it was easiest to create them manually. Then, as for the initial histogram question, I used esquisser() along with the palmerpenguins package to observe the distribution of 3 different species of penguin’s body masses and explained what I saw above. Each part shows some different basic functions of R.</p>
+<p>I used different strategies of creating vectors to form the vectors in parts a through d.&nbsp;At times, vectors needed to be created manually, while others could be made more efficiently using rep() functions or further object assignments. Questions such as part c where there is a lot of repetitive data cater much better to the rep() function, and questions such as part d show the necessity of class type agreement in a vector. The vector in part d gave back two characters, rather than a character and a number, because vectors are atomic and return the class type furtherst right in the progression. The vectors in parts a and b, were short and followed less regular patterns, so in this case, it was easiest to create them manually, although in part b a short cut could be used to make this code more effective especially if we had wanted to make a vector with more entries. Then, as for the initial histogram question, I used esquisser() along with the palmerpenguins package to observe the distribution of 3 different species of penguin’s body masses and explained what I saw above. Each part here clearly shows some different basic functions of R.</p>
 
 </section>
 </section>
